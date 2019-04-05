@@ -1,0 +1,24 @@
+{
+  "name": "gonode-modulo-02",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dvsilva/secondAppNode.git",
+  "author": "Danyllo Silva",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js -e js"
+  },
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "moment": "^2.24.0",
+    "multer": "^1.4.1",
+    "node-coap-client": "^1.0.2",
+    "nunjucks": "^3.1.7",
+    "nunjucks-date-filter": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
