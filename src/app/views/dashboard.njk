@@ -1,0 +1,26 @@
+{% extends "_layouts/default.njk" %}
+
+{% block body %}
+  <div class="content">
+
+  <strong>Hello, Danyllo</strong>
+
+  <p>Sensors:</p>
+  <ul class="providers">
+      <li class="provider">
+        <div>
+          <img src=""/>
+          <strong>{{sensors.temperature.value}}</strong>
+          <strong>{{sensors.temperature.timestamp}}</strong>
+        </div>
+      </li>
+       <li class="provider">
+        <div>
+          <img src=""/>
+          <strong>{{sensors.humidity.value}}</strong>
+          <strong>{{sensors.humidity.timestamp}}</strong>
+        </div>
+      </li>
+  </ul>
+
+{% endblock %}
