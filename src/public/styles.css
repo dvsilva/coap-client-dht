@@ -23,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased !important;
 }
 
-.auth-wrapper {
+.form-wrapper {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -35,10 +35,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
-.auth-wrapper form {
+.form-wrapper form {
   display: flex;
   flex-direction: column;
   max-width: 300px;
@@ -49,11 +49,11 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.auth-wrapper form > img {
+.form-wrapper form > img {
   margin-bottom: 20px;
 }
 
-.auth-wrapper form input:not([type="checkbox"]) {
+.form-wrapper form input:not([type="checkbox"]) {
   height: 40px;
   padding: 0 15px;
   border: 1px solid #eee;
@@ -63,11 +63,11 @@ body {
   color: #444;
 }
 
-.auth-wrapper form input:not([type="checkbox"]):focus {
+.form-wrapper form input:not([type="checkbox"]):focus {
   border-color: #c1b2f3;
 }
 
-.auth-wrapper form label[for="avatar"] {
+.form-wrapper form label[for="avatar"] {
   width: 80px;
   height: 80px;
   background: #eee;
@@ -80,27 +80,27 @@ body {
   overflow: hidden;
 }
 
-.auth-wrapper form label[for="avatar"] img.preview {
+.form-wrapper form label[for="avatar"] img.preview {
   width: 100%;
   min-height: 100%;
 }
 
-.auth-wrapper form label[for="provider"] {
+.form-wrapper form label[for="provider"] {
   margin: 5px 0 10px;
   font-size: 13px;
   color: #444;
   align-self: center;
 }
 
-.auth-wrapper form label[for="provider"] input {
+.form-wrapper form label[for="provider"] input {
   margin-right: 2px;
 }
 
-.auth-wrapper form input[type="file"] {
+.form-wrapper form input[type="file"] {
   display: none;
 }
 
-.auth-wrapper form button {
+.form-wrapper form button {
   height: 40px;
   display: flex;
   justify-content: center;
@@ -114,11 +114,11 @@ body {
   margin-top: 5px;
 }
 
-.auth-wrapper form button:hover {
+.form-wrapper form button:hover {
   background: #634dac;
 }
 
-.auth-wrapper form a {
+.form-wrapper form a {
   margin-top: 15px;
   display: block;
   text-align: center;
@@ -126,19 +126,20 @@ body {
   text-decoration: none;
 }
 
-.auth-wrapper form a:hover {
+.form-wrapper form a:hover {
   color: #666;
 }
 
 .main-wrapper .content {
   display: flex;
   flex-direction: column;
-  max-width: 350px;
+  max-width: 90%;
   width: 100%;
   background: #fff;
   border-radius: 4px;
   padding: 30px 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .main-wrapper .content > strong {
@@ -184,10 +185,18 @@ body {
   color: #444;
 }
 
+.itens {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 ul.providers {
   list-style: none;
   display: flex;
   flex-direction: column;
+  padding: 15px;
+  min-width: 33%;
 }
 
 .provider {
@@ -197,7 +206,8 @@ ul.providers {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
 }
 
 .provider div {
@@ -212,18 +222,23 @@ ul.providers {
 }
 
 .provider strong {
+  padding-top: 20px;
+  width: 100%;
   margin-left: 15px;
   color: #444;
 }
 
-.provider a {
+.providers a {
   background: #7159c1;
   padding: 5px 10px;
+  margin-top: 20px;
   font-weight: bold;
   text-decoration: none;
   font-size: 16px;
   border-radius: 4px;
   color: #fff;
+  width: 100%;
+  text-align: center;
 }
 
 .alert {

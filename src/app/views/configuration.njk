@@ -1,0 +1,16 @@
+{% extends "_layouts/default.njk" %}
+
+{% block body %}
+  <div class="form-wrapper">
+    <form action="/configure" method="post" >
+
+      <input type="text" name="min_temperature" placeholder="Min Temperature">
+      <input type="text" name="max_temperature" placeholder="Max Temperature">
+      <input type="text" name="min_humidity" placeholder="Min Humidity">
+      <input type="text" name="max_humidity" placeholder="Max Humidity">
+
+      <button type="submit">Update</button>
+    </form>
+  </div>
+
+{% endblock %}

@@ -3,24 +3,57 @@
 {% block body %}
   <div class="content">
 
-  <strong>Hello, Danyllo</strong>
+  <strong>Hello, Danyllo!</strong>
 
-  <p>Sensors:</p>
-  <ul class="providers">
+
+  <div class="itens">
+
+
+     <ul class="providers">
+        <li class="provider">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_MtBJh7jGt6TqVKtwo5E3tst4MHVVhYi_Wfx_5TxHSmykuqV1XQ"/>
+            <strong>Temperature: {{sensors.temperature.value}}°</strong>
+            <strong>Timestamp: {{sensors.temperature.dataformatada}}</strong>
+        </li>
+       </ul>
+       <ul class="providers">
+        <li class="provider">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfElsDIKk3xAIungeyq4HVZB0CodHB1quy2q4FaELvJ5RRjPYJ"/>
+            <strong>Humidity: {{sensors.humidity.value}}%</strong>
+            <strong>Timestamp: {{sensors.humidity.dataformatada}}</strong>
+        </li>
+    </ul>
+
+    <ul class="providers">
+          <li class="provider">
+            <img src="https://cdn4.iconfinder.com/data/icons/materia-flat-lightning/24/020_022_led_diode_light_emitting_luminodiode-512.png"/>
+            <strong>Temperature LED</strong>
+            <strong>Pin: {{actuators.temperature_led.port}}</strong>
+            <strong>State: {{actuators.temperature_led.state}}</strong>
+        </li>
+       </ul>
+       <ul class="providers">
+        <li class="provider">
+            <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/led.png"/>
+            <strong>Humidity LED</strong>
+            <strong>Pin: {{actuators.humidity_led.port}}</strong>
+            <strong>State: {{actuators.humidity_led.state}}</strong>
+        </li>
+    </ul>
+
+    <ul class="providers">
       <li class="provider">
-        <div>
-          <img src=""/>
-          <strong>{{sensors.temperature.value}}</strong>
-          <strong>{{sensors.temperature.timestamp}}</strong>
-        </div>
+        <strong>Min Temperature: {{appconfig.temperature.min}}°</strong>
+        <strong>Max Temperature: {{appconfig.temperature.max}}°</strong>
+        <strong>Min Humidity: {{appconfig.humidity.min}}%</strong>
+        <strong>Max Humidity: {{appconfig.humidity.max}}%</strong>
+
+        <a href="/configuration">Configure</a>
       </li>
-       <li class="provider">
-        <div>
-          <img src=""/>
-          <strong>{{sensors.humidity.value}}</strong>
-          <strong>{{sensors.humidity.timestamp}}</strong>
-        </div>
-      </li>
-  </ul>
+    </ul>
+
+  </div>
+
+</div>
 
 {% endblock %}
